@@ -65,7 +65,7 @@ def main():
 
 	# parse inputs
 	subjectID = config['_inputs'][0]['meta']['subject']
-	outdir = './treactmeasures/'
+	outdir = './tractmeasures/'
 	# load data
 	reference = nib.load(config['dwi'])
 	sft = load_tractogram(config['tractogram'],reference)
