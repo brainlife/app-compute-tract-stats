@@ -1,0 +1,23 @@
+{
+	"dwi":	"./data/dwi/dwi.nii.gz",
+	"tractogram":	"./data/track/track.tck",
+	"classification":	"./data/wmc/classification.mat",
+   "_inputs": [
+        {
+            "_id": "5e81edb3fa1b63b5fd140551",
+            "datatype_tags": [
+                "preprocessed"
+            ],
+            "tags": [
+                "fsl_anat",
+                "acpc_aligned",
+                "1mm"
+            ],
+            "project": "5d2fb9756c03750a8a525343",
+            "meta": {
+                "subject": "subj062",
+                "session": "1"
+            }
+		}
+	]
+}
