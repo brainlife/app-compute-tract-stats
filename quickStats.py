@@ -24,7 +24,7 @@ def computeStats(subjectID,reference,streamlines,classification,outdir):
 	mean_z = []
 	num_vox = []
 
-	tract_index_labels = np.unique(classification['index'].tolist())
+	tract_index_labels = np.trim_zeros(np.unique(classification['index'].tolist()))
 
 	qb = QuickBundles(np.inf)
 
