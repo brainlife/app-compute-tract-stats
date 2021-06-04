@@ -9,9 +9,9 @@
 set -e
 
 # generate csv that can be useful in MLC analyses
-[ ! -f ./tractmeasures/output_FiberStats.csv ] && SINGULARITYENV_PYTHONNOUSERSITE=true singularity exec -e docker://brainlife/pyafq:dev ./quickStats.py
+[ ! -f ./tractmeasures/tractmeasures.csv ] && SINGULARITYENV_PYTHONNOUSERSITE=true singularity exec -e docker://brainlife/pyafq:dev ./quickStats.py
 
-if [ -f ./tractmeasures/output_FiberStats.csv ]; then
+if [ -f ./tractmeasures/tractmeasures.csv ]; then
 	echo "complete"
 	exit 0
 else
