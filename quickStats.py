@@ -54,7 +54,7 @@ def computeStats(subjectID,reference,streamlines,classification,outdir):
 	df['centroid_y'] = mean_y
 	df['centroid_z'] = mean_z
 
-	df.to_csv('%s/output_FiberStats.csv' %outdir,index=False)
+	df.to_csv('%s/tractmeasures.csv' %outdir,index=False)
 	
 
 def main():
