@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -20,13 +20,13 @@ For each tract in the classification, computes streamline count, average length,
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/dwi` · `neuro/wmc` · `neuro/track/tck` |
-| 📤 **Outputs** | `neuro/tractmeasures` |
-| 🐳 **Container** | `brainlife/pyafq:dev` |
-| ⚙️ **Resources** | 1 CPUs |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.439](https://doi.org/10.25663/brainlife.app.439) |
+| **Inputs** | `neuro/dwi` · `neuro/wmc` · `neuro/track/tck` |
+| **Outputs** | `neuro/tractmeasures` |
+| **Container** | `brainlife/pyafq:dev` |
+| **Resources** | 1 CPUs |
+| **Run it** | [doi.org/10.25663/brainlife.app.439](https://doi.org/10.25663/brainlife.app.439) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -34,7 +34,7 @@ For each tract in the classification, computes streamline count, average length,
 | `wmc` | `neuro/wmc` | yes | White matter classification (classification.mat) assigning streamlines to tracts. |
 | `track` | `neuro/track/tck` | yes | Tractogram (.tck) the classification refers to. Must match the classification and be in the DWI space. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
@@ -42,11 +42,11 @@ For each tract in the classification, computes streamline count, average length,
 
 <!-- brainlife-app:end -->
 
-## 🚀 Running the App
+## Running the App
 
 The App runs from the [`v1.0`](https://github.com/brainlife/app-compute-tract-stats/tree/v1.0) branch of this repository.
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.439](https://doi.org/10.25663/brainlife.app.439) and choose, for one subject:
 
@@ -56,7 +56,7 @@ Open the App at [doi.org/10.25663/brainlife.app.439](https://doi.org/10.25663/br
 
 Press **Execute**. The App has no options. The statistics are archived to your project as a `neuro/tractmeasures` dataset tagged `macro`, which can be merged with tract profiles by the [Compile tract macro-structural and profile data](https://doi.org/10.25663/brainlife.app.397) App.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/); DIPY, nibabel and pandas come from the `brainlife/pyafq:dev` container. Without Singularity, install [DIPY](https://dipy.org/), nibabel, SciPy and pandas and run `quickStats.py` directly.
 
@@ -78,7 +78,7 @@ You need [Singularity/Apptainer](https://apptainer.org/); DIPY, nibabel and pand
    ./main
    ```
 
-### 🧪 Sample data
+### Sample data
 
 Download sample datasets from brainlife.io with the [brainlife CLI](https://github.com/brainlife/cli):
 
@@ -89,7 +89,7 @@ mkdir input
 bl dataset download <dataset id>
 ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 tractmeasures/
@@ -98,11 +98,11 @@ tractmeasures/
 
 Columns: `subjectID`, `structureID`, `nodeID`, `streamline_count`, `average_length`, `average_curvature` (mean curvature of the tract's QuickBundles centroid), `voxel_count` (voxels the tract's density map occupies on the DWI grid) and `centroid_x`, `centroid_y`, `centroid_z` (mean orientation of the centroid).
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`stats computations failed somewhere. please check logs and derivatives`**: `tractmeasures.csv` was not written. Check that the classification was made from this tractogram and that the tractogram is in the same space as the DWI.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -114,7 +114,7 @@ Columns: `subjectID`, `structureID`, `nodeID`, `streamline_count`, `average_leng
 - Kruper et al. Evaluating the Reliability of Human Brain White Matter Tractometry. *Aperture Neuro* 2021 (2021). [doi:10.52294/e6198273-b8e3-4b63-babb-6e6b0da10669](https://doi.org/10.52294/e6198273-b8e3-4b63-babb-6e6b0da10669)
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 
-## 👥 Authors
+## Authors
 
 - Brad Caron
 
@@ -122,7 +122,7 @@ Columns: `subjectID`, `structureID`, `nodeID`, `streamline_count`, `average_leng
 
 **Project director:** Franco Pestilli
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -141,6 +141,6 @@ Columns: `subjectID`, `structureID`, `nodeID`, `streamline_count`, `average_leng
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](LICENSE). Copyright (c) 2020 brainlife.io, The University of Texas at Austin and Indiana University. DIPY is distributed under its own BSD license.
